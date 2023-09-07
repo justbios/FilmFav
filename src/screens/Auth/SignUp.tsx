@@ -6,17 +6,19 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Sizes } from 'utils/constants';
 
 
-const SignIn:FC = () => {
+const SignUp:FC = () => {
 	return (
 		<Wrapper>
 			<View style={styles.logo}>
 				<Text style={styles.textLogo}>FILMFAV</Text>
 			</View>
 			<View style={styles.inputContainer}>
+				<Input label='Name' onChangeText={console.log} />
 				<Input label='Email' onChangeText={console.log} />
 				<Input label='Password' onChangeText={console.log} />
+				<Input label='Confirm Password' onChangeText={console.log} />
 				<Button onPress={console.log}>
-					<Text>Sign in</Text>
+					<Text>Sign up</Text>
 				</Button>
 			</View>
 		</Wrapper>
@@ -41,5 +43,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-
-export default SignIn;
+export default SignUp;
